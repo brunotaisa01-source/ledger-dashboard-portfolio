@@ -4,6 +4,8 @@ This is a complete local portfolio pack for a generic ledger and exception dashb
 
 For the portfolio overview, contribution scope and AI-assisted engineering context, see [PORTFOLIO_CONTEXT.md](PORTFOLIO_CONTEXT.md).
 
+For the visual architecture and validation gates, see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
 ## Quick start
 
 Exact validated dependency set: Python 3.11.9; `pandas==2.2.3`, `numpy==2.4.6`, `openpyxl==3.1.5`, `pyarrow==25.0.0`, `playwright==1.58.0`, `python-dotenv==1.2.1`, `pytest==9.0.2`, and `pytest-cov==7.0.0`. Optional syntax tool: Node.js 24.18.0. Install only from the manifest:
