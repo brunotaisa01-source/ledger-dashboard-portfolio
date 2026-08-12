@@ -1,0 +1,31 @@
+/* 
+   01_base.css  Reset, :root variables, body, layout foundations
+    */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+*:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 4px; }
+:root {
+    --primary: #028090; --secondary: #00A896; --accent: #02C39A;
+    --teal: #028090; --teal-light: #2AB7CA;
+    --dark: #1E2761; --green: #28A745; --red: #DC3545;
+    --orange: #FF6B35; --yellow: #FFC107;
+    --bg: #F8F9FA; --card: #FFFFFF; --border: #E9ECEF; --text: #1E2761; --text-muted: #6C757D;
+    --shadow: 0 2px 12px rgba(0,0,0,0.06); --shadow-hover: 0 8px 32px rgba(0,0,0,0.12); --radius: 16px;
+    --xms-bg: #0f172a; --xms-text: #e2e8f0; --xms-hover: #1e293b; --xms-panel-bg: #1e293b; --xms-accent: #667eea;
+    --badge-high: #DC3545; --badge-medium: #E67E00; --badge-low: #28A745; --badge-rol: #028090;
+}
+body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%); color: var(--text); min-height: 100vh; }
+
+/* Mantem font-size fixo em 16px - mais previsivel e estavel */
+html { font-size: 16px; }
+
+.main-content { margin-left: 280px; padding: 2rem 2.5rem; min-height: 100vh; }
+.page { display: none; }
+.page.active { display: block; animation: fadeIn 0.4s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+.page-header { margin-bottom: 2rem; }
+.page-title { font-size: 2rem; font-weight: 800; color: var(--dark); margin-bottom: 0.3rem; letter-spacing: -0.5px; }
+.page-subtitle { color: var(--text-muted); font-size: 0.95rem; font-weight: 400; }
+
+.no-data { text-align: center; padding: 3rem; color: var(--text-muted); font-size: 0.9rem; }

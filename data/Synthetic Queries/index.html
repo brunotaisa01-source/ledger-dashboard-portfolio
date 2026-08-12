@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Synthetic Queries workbench local contract build" />
+    <link rel="icon" href="data:," />
+    <title>Synthetic Queries Workbench</title>
+  </head>
+  <body>
+    <div
+      id="app-root"
+      data-synq-tabs="Inbox|Completed|All"
+      data-synq-columns="Ticket Number|Status|Received|Age|Queue|From|Vendor|Vendor Name|Category|Entity|Subject|Action Type|Resolved Date|Days to Resolve"
+    >
+      <nav aria-label="Synthetic Queries tabs">
+        <button type="button" data-tab="Inbox">Inbox</button>
+        <button type="button" data-tab="Completed">Completed</button>
+        <button type="button" data-tab="All">All</button>
+      </nav>
+      <table aria-label="Synthetic Queries loading shell">
+        <thead>
+          <tr>
+            <th scope="col">Ticket Number</th><th scope="col">Status</th><th scope="col">Received</th>
+            <th scope="col">Age</th><th scope="col">Queue</th><th scope="col">From</th>
+            <th scope="col">Vendor</th><th scope="col">Vendor Name</th><th scope="col">Category</th>
+            <th scope="col">Entity</th><th scope="col">Subject</th><th scope="col">Action Type</th>
+            <th scope="col">Resolved Date</th><th scope="col">Days to Resolve</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <script>
+      window.SYNQ_CONFIG = window.SYNQ_CONFIG || {
+        synqLocalSource: {
+          siteUrl: 'http://127.0.0.1/',
+          listAllowlist: ['SYNQ_Cases', 'SYNQ_Access_Matrix', 'SYNQ_Commands', 'SYNQ_Reminder_Outbox', 'SYNQ_Audit']
+        }
+      };
+    </script>
+    <script src="assets/app.js" defer></script>
+  </body>
+</html>

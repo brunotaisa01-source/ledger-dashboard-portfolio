@@ -1,0 +1,7 @@
+{
+  "overall": "ok",
+  "checked_at": "2026-08-10T12:00:00Z",
+  "checks": {
+    "embedded_fixture": {"ok": true, "age_hours": 0}
+  }
+}

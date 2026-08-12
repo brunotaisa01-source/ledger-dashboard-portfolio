@@ -1,0 +1,59 @@
+{
+  "schema_version": 2,
+  "project_id": "project-analytics-02-ledger",
+  "status": "LOCAL_GREEN_EXTERNAL_RED",
+  "scope": "public local synthetic pack",
+  "stages": {
+    "load": {"status": "GREEN", "nonempty_fixture_contracts": true},
+    "etl_transform": {"status": "GREEN", "staged_transactionally": true},
+    "query": {"status": "GREEN", "row_count": 8, "amount_total": 4682.0},
+    "sqlite": {
+      "status": "GREEN",
+      "databases": 5,
+      "bootstrap_rows": {"key": 4, "ledger": 4, "review": 1, "statement": 1, "escalation": 1},
+      "reviewer_sidecars_present": 0
+    },
+    "cli_contracts": {
+      "status": "GREEN",
+      "help_has_side_effects": false,
+      "empty_input_schema_or_sql_exits_nonzero": true
+    },
+    "bootstrap_validation": {"status": "GREEN", "real_checks": 4, "vacuous_success_allowed": false},
+    "typecheck": {
+      "status": "NOT_RUN",
+      "reason": "The TypeScript compiler is not shipped and dependency installation was prohibited for this repair."
+    },
+    "tests": {"status": "GREEN", "pytest_tests": 44, "unittest_tests": 3, "node_tests": 26, "restored_contract_files": 4},
+    "browser": {
+      "status": "GREEN",
+      "engine": "installed Edge through Playwright",
+      "visible_rows": 8,
+      "console_errors": 0,
+      "page_errors": 0,
+      "external_requests": 0
+    },
+    "byte_level_scan": {"status": "GREEN", "findings": 0},
+    "external_sharepoint_tenant": {
+      "status": "RED",
+      "reason": "No tenant credentials, permissions, remote readback or live refresh were exercised."
+    }
+  },
+  "public_validation": {
+    "self_contained": true,
+    "preflight_command": "python scripts/tools/preflight_pack.py",
+    "python_test_command": "python -m pytest -q tests",
+    "node_test_command": "npm test",
+    "typecheck_command": "npm run typecheck",
+    "e2e_command": "python scripts/synthetic_e2e.py",
+    "external_services_required": false
+  },
+  "components": {
+    "ui": "Ledger HTML, CSS, browser JavaScript and TypeScript declarations",
+    "backend": "Python loaders, reports, adapters and validation",
+    "etl": "weekly loaders, staging, normalization and dashboard generation",
+    "schema": "SQL plus five local SQLite handoffs",
+    "contracts": "nonempty date, owner and category fixtures and CLI fail-closed rules",
+    "tests": "restored Python contracts, Node contracts, typecheck, byte scan and real-browser flow"
+  },
+  "release_authorization": false
+}

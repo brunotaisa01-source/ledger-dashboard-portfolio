@@ -1,0 +1,13 @@
+{
+  "project_id": "project-analytics-02-ledger",
+  "display_name": "Ledger Dashboard",
+  "entrypoint": "dashboard/dashboard.html",
+  "data_js": "dashboard/dashboard_data.js",
+  "data_symbol": "DASHBOARD_DATA",
+  "rows_kind": "compressed_weeks_raw",
+  "rows_key": "2026-08-10",
+  "filter_keys": ["countries", "company_codes", "statuses", "query_types", "owners", "vendor_categories", "payment_blocks"],
+  "sqlite_paths": [],
+  "ui_tokens": ["dashboard_data.js", "filter", "canvas"],
+  "required_paths": ["README.md", "PROJECT.md", "dashboard/dashboard.html", "dashboard/dashboard_data.js", "dashboard/js", "data/Synthetic Queries/index.html", "scripts", "sql", "automation"]
+}

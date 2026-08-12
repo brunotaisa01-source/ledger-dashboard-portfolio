@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "project_id": "project-analytics-02-ledger",
+  "status": "RED",
+  "stages": {
+    "load": "GREEN",
+    "etl_transform": "GREEN",
+    "query": {
+      "status": "GREEN",
+      "row_count": 2,
+      "amount_total": 1170.5
+    },
+    "filters": {
+      "status": "GREEN",
+      "counts": {
+        "countries": 2,
+        "company_codes": 2,
+        "statuses": 2,
+        "query_types": 2,
+        "owners": 2,
+        "vendor_categories": 2,
+        "payment_blocks": 1
+      },
+      "missing": []
+    },
+    "ui_static_smoke": {
+      "status": "GREEN",
+      "local_refs": [
+        "dashboard_data.js"
+      ],
+      "missing": [],
+      "tokens": {
+        "dashboard_data.js": true,
+        "filter": true,
+        "canvas": true
+      }
+    },
+    "browser_smoke": {
+      "status": "RED",
+      "method": "local HTTP plus headless browser filter/refresh attempt",
+      "reason": "Interactive browser evidence is not clean: runtime errors or timeouts remain; HTTP and static UI checks are separate GREEN evidence.",
+      "required_for_definitive": true
+    },
+    "handoff": "GREEN",
+    "quality_scan": {
+      "status": "GREEN",
+      "findings": [],
+      "coverage": {
+        "text": 154,
+        "json": 15,
+        "workbook": 3,
+        "sqlite": 0,
+        "binary": 2,
+        "screenshots": 0,
+        "unknown": 0
+      }
+    }
+  },
+  "evidence": {
+    "source_rows": 2,
+    "normalized_rows": 2,
+    "sqlite_tables": {}
+  },
+  "errors": [
+    "interactive browser smoke is RED; definitive UI refresh/filter flow is not proven"
+  ],
+  "scan_scope": {
+    "text_json_workbook_sqlite_binary_screenshots": true,
+    "uninspected_classes_are_red": true,
+    "interactive_browser_required_for_definitive": true
+  }
+}

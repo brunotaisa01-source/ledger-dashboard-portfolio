@@ -1,0 +1,59 @@
+{
+  "rows": [
+    {
+      "SnapshotDate": "2026-08-10",
+      "LoadDate": "2026-08-10T12:00:00",
+      "SourceType": "Invoice Error",
+      "SourceFile": "SyntheticReview_Errors_Synthetic.xlsx",
+      "Risk": "Medium",
+      "System": "ERP1",
+      "DivisionRef": "SYN-CC-001",
+      "Division": "Synthetic Division",
+      "VendorNo": "SYN-SUP-001",
+      "VendorName": "Synthetic Supplier Alpha",
+      "Region": "Northland",
+      "InvoiceDate": "2026-08-01",
+      "PostedDate": "2026-08-02",
+      "InvoiceNo": "SYN-INV-001",
+      "InvoiceAmount": 125.5,
+      "Currency": "EUR",
+      "IdentifiedDate": "2026-08-10",
+      "AgeDays": 9,
+      "ErrorType": "Synthetic mismatch",
+      "Classification": "Review",
+      "Reason": "Synthetic fixture",
+      "RecoveryStatus": "Pending",
+      "AssignedUser": "Synthetic Owner 001",
+      "UniqueRef": "SYN-CC-001 SYN-SUP-001",
+      "Category": "Services",
+      "Owner": "Synthetic Owner 001",
+      "Team": "Key"
+    }
+  ],
+  "statement_rows": [
+    {
+      "SnapshotDate": "2026-08-10",
+      "LoadDate": "2026-08-10T12:00:00",
+      "SourceFile": "reconciliation-history_synthetic.xlsx",
+      "RecID": 1,
+      "RecStatus": "Unreconciled",
+      "VendorNos": "SYN-SUP-001",
+      "VendorNames": "Synthetic Supplier Alpha",
+      "LedgerDate": "2026-08-10",
+      "LedgerBalance": 125.5,
+      "StatementBalance": 120.0,
+      "Difference": 5.5,
+      "LineItems": 1,
+      "ActionsPending": 1,
+      "AssignedUser": "Synthetic Owner 001",
+      "CompanyCodes": "SYN-CC-001",
+      "Country": "Northland",
+      "PrimaryVendorNo": "SYN-SUP-001",
+      "PrimaryCompanyCode": "SYN-CC-001",
+      "UniqueRef": "SYN-CC-001 SYN-SUP-001",
+      "Category": "Services",
+      "Owner": "Synthetic Owner 001",
+      "Team": "Key"
+    }
+  ]
+}

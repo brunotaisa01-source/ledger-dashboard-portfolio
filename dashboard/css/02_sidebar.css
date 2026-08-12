@@ -1,0 +1,46 @@
+/* 
+   02_sidebar.css  Sidebar, filters, navigation
+    */
+
+.sidebar { width: 280px; background: linear-gradient(180deg, var(--dark) 0%, #2A3875 100%); position: fixed; top: 0; left: 0; height: 100vh; z-index: 100; overflow-y: auto; box-shadow: 4px 0 20px rgba(0,0,0,0.15); display: flex; flex-direction: column; }
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 3px; }
+.logo { padding: 0.6rem 1.2rem 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.logo h1 { color: white; font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px; }
+.logo h1 span { color: var(--accent); }
+.logo p { color: rgba(255,255,255,0.5); font-size: 0.6rem; margin-top: 0.15rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+.OK-brand { font-size: 1.2rem; font-weight: 900; letter-spacing: 1px; margin-bottom: 0.1rem; }
+.OK-brand .OK-e { color: #7AB929; }
+.OK-brand .OK-g { color: #00529B; }
+
+.filter-section { padding: 0 1.5rem; margin-top: 0.75rem; }
+.filter-label { color: rgba(255,255,255,0.5); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.8px; display: block; margin-bottom: 0.25rem; font-weight: 600; }
+.filter-section select { width: 100%; padding: 0.55rem 0.75rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; color: white; font-size: 0.8rem; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+.filter-section select:hover { background: rgba(255,255,255,0.14); }
+.filter-section select:focus { outline: none; border-color: var(--accent); }
+.filter-section select option { background: #1E2761; color: white; }
+
+/*  Multi-select dropdown  */
+.multi-select-wrap { position: relative; }
+.multi-select-display { width: 100%; padding: 0.55rem 0.75rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; color: white; font-size: 0.8rem; cursor: pointer; font-family: 'Inter', sans-serif; transition: all 0.2s; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; box-sizing: border-box; }
+.multi-select-display:hover { background: rgba(255,255,255,0.14); }
+.multi-select-dropdown { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #1E2761; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; margin-top: 2px; z-index: 1000; padding: 0.3rem 0; }
+.multi-select-wrap.open .multi-select-dropdown { display: block; }
+.multi-select-dropdown label { display: flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.75rem; color: white; font-size: 0.8rem; cursor: pointer; transition: background 0.15s; }
+.multi-select-dropdown label:hover { background: rgba(255,255,255,0.1); }
+.multi-select-dropdown input[type="checkbox"] { accent-color: var(--accent); }
+.sidebar .multi-select-display { padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.75rem; background-position: right 8px center; }
+.sidebar .multi-select-dropdown label { font-size: 0.75rem; padding: 0.25rem 0.6rem; }
+
+/*  Sidebar compact overrides  fit all filters without scrolling  */
+.sidebar .filter-section { padding: 0 1.2rem; margin-top: 0.3rem; }
+.sidebar .filter-label { font-size: 0.58rem; margin-bottom: 0.1rem; }
+.sidebar .filter-section select { padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.75rem; background-position: right 8px center; }
+
+.nav-divider { border-top: 1px solid rgba(255,255,255,0.08); margin: 0.35rem 0 0.1rem; }
+.nav-menu { list-style: none; }
+.nav-item { padding: 0.35rem 1.2rem; cursor: pointer; transition: all 0.25s; color: rgba(255,255,255,0.6); font-weight: 500; font-size: 0.8rem; display: flex; align-items: center; gap: 0.6rem; border-left: 4px solid transparent; }
+.nav-item:hover { background: rgba(255,255,255,0.05); color: white; }
+.nav-item.active { background: rgba(2,195,154,0.12); color: white; border-left: 4px solid var(--accent); font-weight: 700; }
+.nav-item i { width: 16px; text-align: center; font-size: 0.8rem; }
+.sidebar-footer { margin-top: auto; padding: 0.3rem 1rem; border-top: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.3); font-size: 0.6rem; text-align: center; }

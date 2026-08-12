@@ -1,0 +1,9 @@
+{
+  "release": "synthetic-2026-08-11",
+  "files": [
+    "index.html",
+    "assets/app.js",
+    "assets/synthetic-queries-launcher.js",
+    "manifest.json"
+  ]
+}

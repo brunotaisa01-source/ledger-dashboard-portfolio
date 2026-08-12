@@ -1,0 +1,9 @@
+{
+  "name": "Synthetic Query Launcher",
+  "version": "1.0.0",
+  "queries": [
+    "open-items",
+    "blocked-items"
+  ],
+  "data_policy": "deterministic synthetic fixtures"
+}
