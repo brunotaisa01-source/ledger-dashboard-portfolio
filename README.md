@@ -8,14 +8,16 @@ For the visual architecture and validation gates, see [docs/ARCHITECTURE.md](doc
 
 ## What this project delivers
 
-- A generic ledger and exception dashboard with filters, queries, reports and browser contracts.
-- Fail-closed validation, transactional staging and five SQLite handoff databases.
-- Python ETL/loaders, SQL schemas, typed browser declarations and a synthetic query subpack.
-- Local preflight, unit, Node, typecheck, E2E and browser validation paths.
+This is a ledger and exception-management data product built around safe promotion of validated data. It combines a browser UI, Python loaders and reports, SQL schemas, transactional staging, five SQLite handoffs, typed browser contracts and a synthetic query subpack.
+
+- Ledger filters, queries, reports, generated browser data and operator-facing exception views.
+- Fail-closed preflight and transactional staging that preserve the previous database when validation fails.
+- Weekly loaders, normalization, SQL integrity checks, atomic promotion and explicit non-empty/date/owner/category contracts.
+- Python, Node, typecheck, synthetic E2E, browser and command-behavior validation paths.
 
 ## Problem it solves
 
-It makes ledger exceptions and data-quality issues visible without risking partial database updates. Failed validation stops promotion, while successful runs produce consistent data for investigation, reporting and operational follow-up.
+It addresses two related problems: exception visibility and unsafe data refreshes. The product makes ledger issues easier to investigate while preventing empty, malformed or partially validated inputs from replacing a known-good handoff, giving downstream reporting a clearer integrity boundary.
 
 ## Quick start
 
